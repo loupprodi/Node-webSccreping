@@ -1,10 +1,24 @@
 const puppeteer = require("puppeteer");
 
-(async () => {
+// (async () => {
+//   const browser = await puppeteer.launch();
+//   const page = await browser.newPage();
+//   await page.goto("https://www.alura.com.br/formacao-front-end");
+//   await page.screenshot({ path: "example.png" });
+
+//   await browser.close();
+// })();
+
+const url =  "https://www.mercadolivre.com.br/";
+const searchFor = "macbook";
+
+(async ()=> {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto("https://www.alura.com.br/formacao-front-end");
-  await page.screenshot({ path: "example.png" });
+  console.log("iniciei !");
+
+  await page.goto(url);
+  console.log("fui para a url !")
 
   await browser.close();
 })();
